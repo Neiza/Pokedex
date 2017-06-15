@@ -7,6 +7,10 @@
      if (xhr.status !== 200){
        return cb(new Error("Error loading JSON FROM:" + url + "(" + xhr.status + ")"));
      }
-     cb(null, )
+     cb(null, xhr.response)
    });
- }
+
+   xhr.open("GET", url);
+   xhr.responseType = "json";
+   xhr.send();
+ };
