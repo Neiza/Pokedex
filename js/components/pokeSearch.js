@@ -1,13 +1,13 @@
 "use strict";
 const PokemonItem = (pokemon) => {
   const pokeItem = $('<div class="poke-item"></div>');
-  const pokeImg = $('<img src= "http://serebii.net/art/th/"'+ pokemon.pokemon_entries.entry_number +'".png"></img>');
+  const pokeImg = $('<img src= "http://serebii.net/art/th/'+ pokemon.entry_number +'.png"></img>');
   const pokeIcons = $('<div class="poke-icons"></span>');
   const pokeball = $('<span class="pokeball"></span>');
   const pokeHeart = $('<span class="poke-heart"></span>');
   const pokeArrows = $('<span class="poke-arrows"></span>');
-  const pokeName = $('<h4>'+ pokemon.pokemon_entries.pokemon_species.name +'</h4>');
-console.log(pokemons);
+  const pokeName = $('<h4>'+ pokemon.pokemon_species.name +'</h4>');
+console.log(pokemon);
   pokeball.on('click',(e) => {
     e.preventDefault();
      // aqui hay que poner la funcion del modal
