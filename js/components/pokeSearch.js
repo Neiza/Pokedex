@@ -40,9 +40,10 @@ const PokeSearch =  () => {
   const searchContainer = $('<div class="search-container"></div>');
   const searchInput = $('<input type="text" class="search-input">');
   const searchResult = $('<div class="search-result"></div>');
-console.log(state.pokemons);
+  console.log(state.pokemons);
   searchContainer.append(searchInput);
   searchContainer.append(searchResult);
+  reRender(searchResult,"");
 
   searchInput.on('keyup',(e) => {
     const filter = searchInput.val();
