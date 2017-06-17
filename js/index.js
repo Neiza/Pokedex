@@ -8,6 +8,7 @@ const render = (root) => {
   }
   wrapper.append(Header(update));
   wrapper.append(PokeSearch(update));
+  wrapper.append(PokeModal(update));
   //wrapper.append(StationDetails(update));
 
   root.append(wrapper);

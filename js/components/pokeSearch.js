@@ -3,14 +3,16 @@ const PokemonItem = (pokemon) => {
   const pokeItem = $('<div class="poke-item"></div>');
   const pokeImg = $('<img src= "http://serebii.net/art/th/'+ pokemon.entry_number +'.png"></img>');
   const pokeIcons = $('<div class="poke-icons"></span>');
-  const pokeball = $('<span class="pokeball"></span>');
-  const pokeHeart = $('<span class="poke-heart"></span>');
-  const pokeArrows = $('<span class="poke-arrows"></span>');
+  const pokeball = $('<img src="" class="pokeball">');
+  const pokeHeart = $('<img src="assets/icon/valentines-heart.png" class="poke-heart">');
+  const pokeArrows = $('<img src="" class="poke-arrows">');
   const pokeName = $('<h4>'+ pokemon.pokemon_species.name +'</h4>');
 console.log(pokemon);
-  pokeball.on('click',(e) => {
+  pokeHeart.on('click',(e) => {
     e.preventDefault();
-     // aqui hay que poner la funcion del modal
+    $(".modal-container").addClass("show");
+    $(".modal-container").removeClass("hide");    
+     // aqui hay que poner la funcion del modals
     state.selectedPokemon = pokemon;
   });
 
